@@ -25,7 +25,7 @@ body {
 }
 
 .btn-container {
-    width: 40%;
+    width: 100%;
     display: flex;
     position: relative;
     margin-bottom: 1rem;
@@ -33,7 +33,6 @@ body {
 
 .btn-container input {
     width: 100%;
-    min-width: 150px;
     height: 50px;
     border: 0.5px solid rgb(233, 230, 230);
     border-radius: 0.6rem ;
@@ -59,12 +58,13 @@ body {
 }
 
 .table-body tr {
-    transition: all 0.5s;
+    transition: all 0.8s;
     cursor: pointer;
 }
 
 .btn-container button:hover,
 .table-body tr:hover  {
+    scale: 1.01;
     background-color: #8AEABF;
 }
 
@@ -74,11 +74,10 @@ body {
 
 .table-head,
 .table-body {
-    text-align: justify;
+    text-align: center;
 }
 
 .table-head th {
-    width: 300px;
     height: 60px !important;
     background-color: #E3FBEE;
     color: rgba(41, 40, 40, 0.884);
@@ -94,4 +93,21 @@ body {
 
 .table-body td {
     border-bottom: 0.5px solid rgb(236, 233, 233);
+}
+
+@media (min-width: 700px) {
+    .table-head th {
+        width: 300px;
+    }
+
+    
+    .table-head,
+    .table-body {
+        text-align: justify;
+    }
+
+    .btn-container {
+        width: 40%;
+        min-width: 400px;
+    }
 }
